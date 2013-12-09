@@ -1,22 +1,104 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".DisplayMessageActivity"
-    tools:ignore="MergeRootFrame" >
+    tools:ignore="MergeRootFrame">
 
-    <EditText
-        android:layout_width="309dp"
-        android:layout_height="55dp"
-        android:id="@+id/editText"
-        android:layout_gravity="left|top" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="57dp"
-        android:text="Save"
-        android:id="@+id/button"
-        android:layout_gravity="right|top"
-        android:onClick="saveTask" />
-</FrameLayout>
+
+        <EditText
+            android:id="@+id/enter_task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="23dp"
+            android:hint="@string/task_title"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:textColor="#ffff24bf"/>
+
+        <EditText
+            android:id="@+id/enter_task_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="63dp"
+            android:hint="@string/task_description"
+            android:textColorHint="#FFFFFF"
+            android:textStyle="bold|italic"
+            android:textColor="#ff000002"/>
+
+        <Button
+            android:id="@+id/create_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/set_date"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/lightblue"
+            android:text="@string/create" />
+
+        <CheckBox
+            android:id="@+id/set_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/enter_task_description"
+            android:layout_marginTop="18dp"
+            android:text="Set A Reminder"
+            android:checked="false" />
+            />
+
+        <Button
+            android:id="@+id/set_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/set_date"
+            android:layout_below="@+id/set_date"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="17dp"
+            android:text="Set Alarm Time"
+            android:background="@drawable/lightblue"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/time_set_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/set_time"
+            android:layout_marginLeft="5dp"
+            android:layout_alignBaseline="@+id/set_time"
+            android:textColor="#0000FF" />
+
+        <Button
+            android:id="@+id/set_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignLeft="@+id/set_reminder"
+            android:layout_below="@+id/set_reminder"
+            android:text="Set Alarm Date"
+            android:background="@drawable/lightblue"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/date_set_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/set_date"
+            android:layout_alignLeft="@+id/time_set_view"
+            android:layout_alignBaseline="@+id/set_date"
+            android:textColor="#0000FF" />
+
+
+
+</RelativeLayout>

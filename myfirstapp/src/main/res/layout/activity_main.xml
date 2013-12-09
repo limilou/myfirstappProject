@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/add_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Task"
-        android:id="@+id/button"
+        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:onClick="sendMessage" />
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/add_task"
+        android:layout_marginBottom="15sp"
+        android:background="@drawable/lightblue"/>
 
     <ListView
-        android:layout_width="wrap_content"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="15.0sp"
+        android:layout_below="@+id/add_button">
+
+    </ListView>
+
+
 </RelativeLayout>

@@ -1,31 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ListViewImagesActivity"
-    tools:ignore="MergeRootFrame" >
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginTop="15dp">
 
     <TextView
-        android:layout_width="273dp"
-        android:layout_height="76dp"
-        android:text="New Text"
-        android:id="@+id/textView"
-        android:layout_gravity="left|top"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="0dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="0dp"
-        android:layout_alignBottom="@+id/doneButton"
-        android:layout_toLeftOf="@+id/doneButton" />
-
-    <Button
+        android:id="@+id/task_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="done"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffff24bf"
+        android:textSize="15sp"
+        android:layout_marginTop="3dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/task_date_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/task_title"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/doneButton"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/task_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:maxWidth="250dp"
+        android:textColor="#000002"
+        android:paddingBottom="6dp"
+        android:textSize="15sp"
+        android:layout_marginTop="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/task_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/task_description"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:layout_marginTop="22dp"
+        android:textStyle="bold" />
+
+    <Button
         android:id="@+id/doneButton"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lightblue"
         android:layout_alignParentRight="true"
-        android:onClick="done" />
+        android:layout_centerVertical="true"
+        android:text="@string/done" />
 
 </RelativeLayout>
